@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Loja</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -17,14 +18,59 @@
             <article>
                 <h3>SmartPhone</h3>
                 <img src="img/iphone.jpg" alt="Iphone 17 Pro Max Laranja" width="250" height="250" loading="lazy">
+                <!-- Quando é trocado o caminho da imagem para, iphone-erro.jpg, a imagem não é carregada e o navegador exibe a descrição da imagem, ou seja, o alt -->
             </article>
 
 
-            <article></article>
+            <article>
+                <h3>Camiseta</h3>
+                <figure>
+                    <img src="img/camisa.jpg" alt="Camiseta Branca" width="250" height="250" loading="lazy">
+                    <figcaption>Camiseta Branca - R$: 59,90</figcaption>
+                </figure>
+            </article>
 
+        </section>
+
+        <section id="Video do Produto">
+            <video controls width="400" preload="metadata"
+            title="Video do Produto"
+            loading="lazy">
+                <source src="img/video.mp4" type="video/mp4"> 
+                Seu navegador não suporta video
+            </video>
+        </section>
+
+        <section id="Descrição em Áudio">
+            <audio controls preload="metadata"
+            title="Descrição em Áudio"
+            loading="lazy">
+                <source src="img/descricao-do-produto.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio
+            </audio>
+
+        </section>
+
+        <section id="Conteudo Externo">
+            <iframe src="https://www.youtube.com/embed/s-nWFCgVbTo?si=RHx6nZ-YfbaXpeLQ" 
+            width="560" height="315" 
+            title="YouTube video player" 
+            loading="lazy" allowfullscreen>
+        </iframe>
+</section>
+
+ <section id="Corrigir Video sem Controle">
+            <video width="400" preload="metadata"
+            title="Video do Produto"
+            loading="lazy">
+                <source src="img/video.mp4" type="video/mp4"> 
+            </video>
         </section>
 
     </main>
 
+    <footer>
+        <p>Desenvolvido por Bryan Eduardo & Henrique Guilherme</p>
+    </footer>
 </body>
 </html>
