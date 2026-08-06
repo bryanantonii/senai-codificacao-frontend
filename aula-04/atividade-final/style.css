@@ -1,0 +1,247 @@
+/* ===========================
+   RESET
+=========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    background: #111827;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #334155;
+    z-index: 1000;
+}
+
+header h1{
+    color: #38bdf8;
+    font-size: 2rem;
+}
+
+nav{
+    display: flex;
+    gap: 25px;
+}
+
+nav a{
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav a:hover{
+    color: #38bdf8;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+section{
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* ===========================
+   PRODUTOS
+=========================== */
+
+#produtos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
+
+article{
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+    transition: .3s;
+}
+
+article:hover{
+    transform: translateY(-8px);
+}
+
+article h3{
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+article img{
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+figcaption,
+article p{
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #22c55e;
+}
+
+/* ===========================
+   TABELA
+=========================== */
+
+table{
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    grid-column: 1/-1;
+}
+
+thead{
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+td{
+    padding: 15px;
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+tbody tr:nth-child(even){
+    background: #293548;
+}
+
+tbody tr:hover{
+    background: #334155;
+}
+
+/* ===========================
+   VÍDEOS
+=========================== */
+
+#video{
+    text-align: center;
+}
+
+video,
+audio,
+iframe{
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+}
+
+/* ===========================
+   LOCAL
+=========================== */
+
+#local h2{
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   CONTATO
+=========================== */
+
+form{
+    max-width: 600px;
+    margin: auto;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+form label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #0f172a;
+    color: white;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+    border-color: #38bdf8;
+}
+
+button{
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    background: #1d4ed8;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media (max-width:768px){
+
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #produtos{
+        grid-template-columns: 1fr;
+    }
+
+}
