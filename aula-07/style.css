@@ -1,0 +1,48 @@
+body {
+    background-color: #f4f7fc;
+    padding-top: 160px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: auto;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px 16px;
+}
+
+.card{
+    background-color: white;
+    border: 1;
+    padding: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.etiqueta{
+    background-color: bisque;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#topo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: burlywood;
+    padding: auto;
+    z-index: 100;
+}
