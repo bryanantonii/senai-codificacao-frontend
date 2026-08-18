@@ -1,6 +1,6 @@
 # Repositório SENAI - Codificação Front-End
 
-**Nomes:** Bryan Eduardo de Antoni da Silva, Henrique Guilherme Rosa & William Georg
+**Nomes:** Bryan Eduardo de Antoni da Silva, Henrique Guilherme Rosa & William Davi Georg
 
 **Módulo:** Codificação Front-End
 
