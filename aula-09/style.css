@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0B1020;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #F5F7FF;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "principal"
+    "rodape";
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.area-header {
+  grid-area: "header";
+  background: #333;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.area-principal {
+  grid-area: principal;
+}
+
+.area-rodape {
+  grid-area: rodape;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.logo{
+    display: flex;
+}
+
+.grade-servicos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card-servico{
+    background-color: slategray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.icone{
+    fill: blanchedalmond;
+    transition: 0.5s;
+}
+
+.card-servico:hover .icone{
+    fill: cornflowerblue;
+    transform: scale(20px);
+}
+
+.grade-portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));;
+    height: 400px;
+    background-color: darkkhaki;
+    border-radius: 10px;
+}
+
+.passos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
