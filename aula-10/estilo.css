@@ -1,0 +1,125 @@
+/* estilo.css inicial — a cor #0570b5 aparece REPETIDA de propósito.
+   Passo 1 da atividade: criem o :root e troquem tudo por var(). */
+
+/* === VARIÁVEIS === */
+:root {
+  /* Cores */
+  --cor-primaria: darkred;
+  --cor-secundaria: red;
+  --cor-texto: white;
+
+  /* Tipografia */
+  --fonte-texto: Arial, sans-serif;
+
+  /* Espaçamento */
+  --padding-ui: 20px;
+
+  /* Bordas */
+  --border-raio: 10px;
+}
+
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* === BASE === */
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+}
+
+
+/* === HEADER === */
+.header {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  padding: var(--padding-ui);
+}
+
+
+/* === NAVEGAÇÃO === */
+.nav-menu ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+
+/* === BANNER === */
+.banner {
+  background-color: var(--cor-primaria);
+  padding: var(--padding-ui);
+  margin: 10px;
+  border-radius: var(--border-raio);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+
+/* === PRODUTOS === */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: var(--padding-ui);
+}
+
+
+/* === CARDS === */
+.product-card {
+  background-color: var(--cor-secundaria);
+  padding: 15px;
+  border-radius: var(--border-raio);
+  text-align: center;
+}
+
+
+/* === BOTÕES === */
+.btn-primary {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: brown;
+}
+
+
+/* === FOOTER === */
+.footer {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  text-align: center;
+  padding: var(--padding-ui);
+  margin-top: 300px;
+}
+
+/* === ANIMAÇÕES === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
