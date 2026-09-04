@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!-- Início do documento HTML e definição do idioma da página. -->
+<html lang="pt-BR">
+<head>
+    <!-- Permite utilizar acentos e caracteres especiais. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página adaptar-se a celulares e tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador. -->
+    <title>Eventos e Validação de Formulários</title>
+
+    <!-- Conecta este HTML ao arquivo responsável pela aparência. -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+        Conecta este HTML ao JavaScript.
+        defer faz o navegador aguardar a leitura do HTML antes de executar o script.
+    -->
+    <!-- <script src="script.js" defer></script> -->
+</head>
+
+<body>
+    <!-- Caixa principal que reúne o conteúdo da página. -->
+    <main class="container">
+        <!-- Título visível da página. -->
+        <h1>Cadastro para receber ofertas</h1>
+
+        <!--
+            O id permite que o JavaScript encontre o formulário.
+            novalidate desativa as mensagens automáticas do navegador para
+            conseguirmos observar nossas próprias validações em JavaScript.
+        -->
+        <form id="form-newsletter" novalidate>
+            <!-- O for relaciona este texto ao input com id nome. -->
+            <label for="nome">Nome:</label>
+
+            <!-- Campo no qual o usuário digita o nome. -->
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+            <!-- O JavaScript atualizará a quantidade de caracteres neste elemento. -->
+            <small id="contador">0 caractere(s) digitado(s)</small>
+
+            <!-- Identificação do campo de e-mail. -->
+            <label for="email">E-mail:</label>
+
+            <!-- Campo no qual o usuário digita o e-mail. -->
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+            >
+
+            <!-- Identificação da lista de cursos. -->
+            <label for="curso">Curso:</label>
+
+            <!-- Lista para o usuário escolher um curso. -->
+            <select id="curso">
+                <!-- A opção inicial possui valor vazio. -->
+                <option value="">Selecione um curso</option>
+
+                <!-- Cada opção possui o texto visível e um valor usado no JavaScript. -->
+                <option value="informatica">Informática</option>
+                <option value="mecatronica">Mecatrônica</option>
+                <option value="administracao">Administração</option>
+            </select>
+
+            <!-- type submit indica que o botão envia o formulário. -->
+            <button type="submit" id="botao-enviar">
+                Realizar cadastro
+            </button>
+        </form>
+
+        <!--
+            Parágrafo inicialmente vazio para mensagens de erro ou sucesso.
+            aria-live ajuda leitores de tela a anunciarem alterações na mensagem.
+        -->
+        <p id="mensagem" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
