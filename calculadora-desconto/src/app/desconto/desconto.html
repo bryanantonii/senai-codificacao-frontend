@@ -1,0 +1,35 @@
+<div class="calculadora-container">
+    <form class="form-box">
+        <h2 class="form-titulo">Calculadora de Desconto</h2>
+
+        <div class="campo-grupo">
+            <label class="campo-label" for="precoOriginal"><i class="fa-solid fa-dollar-sign"></i> Preço Original:</label>
+            <input class="campo-input" type="number" id="precoOriginal" name="precoOriginal" [(ngModel)]="precoOriginal"
+                placeholder="Digite o preço original do produto">
+        </div>
+
+        <div class="campo-grupo">
+            <label class="campo-label" for="percentual"><i class="fa-solid fa-percent"></i> Percentual:</label>
+            <input class="campo-input" type="number" id="percentual" name="percentual" [(ngModel)]="percentual"
+                placeholder="Digite o percentual">
+        </div>
+
+        <div class="campo-grupo">
+            <label class="campo-label" for="numeroParcelas"><i class="fa-solid fa-list-ol"></i> Número de Parcelas:</label>
+            <input class="campo-input" type="number" id="numeroParcelas" name="numeroParcelas" [(ngModel)]="numeroParcelas"
+                placeholder="Digite o número de parcelas">
+        </div>
+
+        <div class="acoes-grupo">
+            <button class="btn-acao" type="button" (click)="aplicarDesconto();"><i class="fa-solid fa-tag"></i> Aplicar Desconto</button>
+            <button class="btn-acao" type="button" (click)="aplicarAcrescimo();"><i class="fa-solid fa-plus"></i> Aplicar Acréscimo</button>
+            <button class="btn-acao" type="button" (click)="calcularParcelas();"><i class="fa-solid fa-money-bill-wave"></i> Parcelar</button>
+            <button class="btn-acao" type="button" (click)="limpar();"><i class="fa-solid fa-trash-can"></i> Limpar</button>
+        </div>
+
+        <div class="resultado-grupo">
+            <p class="mensagem-erro">{{ mensagemErro }}</p>
+            <p class="resultado-texto" *ngIf="calculado">Resultado: {{ resultado }}</p>
+        </div>
+    </form>
+</div>
